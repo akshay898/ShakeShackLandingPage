@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Shake-Shack Landing Page</title>
+        <link rel="icon" type="image/png" href="./img/favicon-32x32.png"/>
+        <link rel="stylesheet" href="./styles.css"/>
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="./img/ss.png" class="logo" alt="logoss" /></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="content">
+               <div class="textBox">
+                <h2>Stand for something good!<br>It's <span>Shake Shack</span></h2>
+                <p>When Shake Shack started as a hot dog cart in New York City's Madison Square Park, our mission was simple: raise funds for a public art project.</p>
+                <a href="https://shakeshack.com/stand-for-something-good">Learn more about us</a>
+               </div> 
+               <div class="imgBox">
+                <img src="./img/img1.png" class="shakeshack" alt="burger"/>
+               </div>
+            </div>
+            <ul class="thumb">
+                <li>
+                    <img src="./img/thumb1.png" onclick="imgChanger('./img/img1.png');changeCircleColor('#eede08')"/>
+                </li>
+                <li>
+                    <img src="./img/thumb2.png" onclick="imgChanger('./img/img2.png');changeCircleColor('#009933')"/>
+                </li>
+                <li>
+                    <img src="./img/thumb3.png" onclick="imgChanger('./img/img3.png');changeCircleColor('#ff3333')"/>
+                </li>
+            </ul>
+            <ul class="contact">
+                <li>
+                    <a href="#"><img src="./img/fb.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/tw.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/inst.png"/></a>
+                </li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgChanger(anything){
+                document.querySelector('.shakeshack').src=anything;
+            }
+
+            function changeCircleColor(color){
+                const circle=document.querySelector('.circle');
+                circle.style.background=color;
+            }
+        </script>
+    </body>
+</html>
